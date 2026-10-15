@@ -1,0 +1,77 @@
+# findy wM-Bus base station configuration (Python >= 3.11, tomllib)
+station_id = "BS-VT-001"
+merge_window_ms = 200        # copies of one transmission from several sectors
+stats_interval_s = 60        # .../stats
+meters_interval_s = 3600     # .../meters
+
+[radio]
+baud = 115200                # IMST HCI: 115200 8N1
+status_period_s = 60         # Gateway Status Report (41h) per sector
+module_latency_ms = 0.0      # end of packet on air -> HCI event; NOT documented, measure
+c_overhead_bits = 48         # C mode preamble + sync for the airtime estimate (EN 13757-4)
+s_overhead_chips = 48        # S mode preamble + sync
+
+[collision]
+eval_delay_s = 0.5           # wait for overlapping telegrams before judging one
+keep_s = 3.0
+usual_ratio = 0.8            # a sector is "usual" for a meter at >= 80 % hit rate
+min_history = 10             # telegrams per meter before usual sectors / period are used
+guard_s = 0.001              # timing tolerance for overlap
+
+# Raspberry Pi 5: dtoverlay=uart0-pi5 (GPIO 14/15), uart1-pi5 (0/1), uart2-pi5 (4/5),
+# uart3-pi5 (8/9), uart4-pi5 (12/13). Check the device names with: ls -l /dev/ttyAMA*
+# GPIO 0/1 are the HAT ID EEPROM pins (ID_SD/ID_SC): check before using uart1-pi5.
+# Sector 6 on a USB-UART: use the stable /dev/serial/by-path/... name, not /dev/ttyUSB0.
+[[sector]]
+id = 1
+port = "/dev/ttyAMA0"
+azimuth_deg = 0
+link_mode = "CT"             # "S", "T", "CT", "C"
+
+[[sector]]
+id = 2
+port = "/dev/ttyAMA1"
+azimuth_deg = 60
+link_mode = "CT"
+
+[[sector]]
+id = 3
+port = "/dev/ttyAMA2"
+azimuth_deg = 120
+link_mode = "CT"
+
+[[sector]]
+id = 4
+port = "/dev/ttyAMA3"
+azimuth_deg = 180
+link_mode = "CT"
+
+[[sector]]
+id = 5
+port = "/dev/ttyAMA4"
+azimuth_deg = 240
+link_mode = "CT"
+
+[[sector]]
+id = 6
+port = "/dev/serial/by-path/platform-xhci-hcd.0-usb-0:1:1.0-port0"
+azimuth_deg = 300
+link_mode = "CT"
+
+[keys]
+file = "/etc/wmbus-bs/keys.csv"     # manufacturer,id,key
+service_url = ""                    # optional: GET ?manufacturer=KAM&id=12345678 -> {"key": "..."}
+service_token = ""
+cache_ttl_s = 3600
+miss_ttl_s = 300
+
+[mqtt]
+host = "broker.example.com"
+port = 8883
+tls = true
+ca_file = ""                        # empty = system CAs
+username = ""
+password = ""
+version = 4                         # 4 = MQTT 3.1.1, 5 = MQTT 5.0
+qos = 1
+topic_prefix = "findy/bs"

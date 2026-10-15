@@ -1,0 +1,15 @@
+[Unit]
+Description=findy wM-Bus base station
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m wmbus_bs.app /etc/wmbus-bs/config.toml
+WorkingDirectory=/opt/wmbus-bs
+User=wmbus
+Group=dialout
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
