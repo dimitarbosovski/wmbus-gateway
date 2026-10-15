@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+gateway/test/test_host
+gateway/test/test_collector
+gateway/test/vectors.h
+*.o
+.venv/
