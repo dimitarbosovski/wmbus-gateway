@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="900" height="250" role="img"><title>How a collision is counted</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <text class="th" x="20" y="30">SECTOR</text>
+  <text class="t" x="20" y="84">S2</text>
+  <text class="t" x="20" y="154">S3</text>
+  <rect class="band" x="430" y="50" width="130" height="140"/>
+  <rect class="bar-acc" x="400" y="70" width="160" height="22" rx="3"/>
+  <text class="t" x="480" y="64" text-anchor="middle">A · decoded</text>
+  <rect class="bar-on" x="430" y="124" width="160" height="18" rx="3"/>
+  <text class="t" x="600" y="138">B · decoded</text>
+  <rect class="ghost" x="400" y="152" width="160" height="18" rx="3"/>
+  <text class="ts" x="570" y="165">A · missing</text>
+  <line class="grid" x1="90" y1="210" x2="860" y2="210"/>
+  <line class="pwr2" x1="400" y1="204" x2="400" y2="216"/><line class="pwr2" x1="560" y1="204" x2="560" y2="216"/>
+  <text class="ts" x="480" y="232" text-anchor="middle">T1 airtime ≈ 3–8 ms</text>
+  <text class="ts" x="120" y="84">usual for A:</text>
+  <text class="ts" x="120" y="100">S2, S3 (≥ 80 %)</text>
+  <text class="t" x="640" y="84">collision_miss[S3] + 1</text>
+  <text class="t" x="640" y="104">rescued_by_other_sector + 1</text>
+  <text class="t" x="640" y="194">disjoint_sectors + 1</text>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 590" width="1010" height="590" role="img"><title>Battery gateway hardware: iM891A-XL, STM32, ESP32, EG915N-EU and power</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="hw-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-acc" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="hw-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-fg" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="hw-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-mut" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+
+  <!-- legend -->
+  <line class="data" x1="330" y1="24" x2="370" y2="24"/><text class="ts" x="378" y="28">data (UART)</text>
+  <line class="ctl" x1="500" y1="24" x2="540" y2="24"/><text class="ts" x="548" y="28">control (EN, reset)</text>
+  <line class="pwr" x1="730" y1="24" x2="770" y2="24"/><text class="ts" x="778" y="28">power</text>
+
+  <!-- antennas -->
+  <line class="pwr2" x1="115" y1="110" x2="115" y2="72"/><path class="pwr2" d="M101 56 L115 72 L129 56"/>
+  <text class="ts" x="138" y="66">868 MHz · 50 Ω</text>
+  <line class="pwr2" x1="915" y1="110" x2="915" y2="72"/><path class="pwr2" d="M901 56 L915 72 L929 56"/>
+  <text class="ts" x="894" y="66" text-anchor="end">LTE B1/3/7/8/20</text>
+
+  <!-- loads -->
+  <rect class="box-acc" x="30" y="110" width="170" height="130" rx="6"/>
+  <text class="tb" x="115" y="136" text-anchor="middle">iM891A-XL</text>
+  <text class="t" x="115" y="158" text-anchor="middle">STM32WLE5 + radio</text>
+  <text class="t" x="115" y="176" text-anchor="middle">wM-Bus Gateway FW</text>
+  <text class="t" x="115" y="194" text-anchor="middle">C/T · 868.95 MHz</text>
+  <text class="ts" x="115" y="214" text-anchor="middle">VDD 1.9–3.6 V</text>
+
+  <rect class="box" x="310" y="110" width="170" height="130" rx="6"/>
+  <text class="tb" x="395" y="136" text-anchor="middle">STM32 (HAL)</text>
+  <text class="t" x="395" y="158" text-anchor="middle">RTC + LSE 32 kHz</text>
+  <text class="t" x="395" y="176" text-anchor="middle">AES/CMAC: mbedTLS</text>
+  <text class="t" x="395" y="194" text-anchor="middle">keys: flash</text>
+  <text class="ts" x="395" y="214" text-anchor="middle">ADC: VBAT</text>
+
+  <rect class="box" x="570" y="110" width="120" height="130" rx="6"/>
+  <text class="tb" x="630" y="136" text-anchor="middle">ESP32</text>
+  <text class="t" x="630" y="158" text-anchor="middle">LTE session</text>
+  <text class="t" x="630" y="176" text-anchor="middle">MQTT over AT</text>
+  <text class="ts" x="630" y="214" text-anchor="middle">module TBD</text>
+
+  <rect class="box" x="725" y="125" width="90" height="50" rx="4"/>
+  <text class="t" x="770" y="146" text-anchor="middle">TXS0108E</text>
+  <text class="ts" x="770" y="164" text-anchor="middle">3.3↔1.8 V</text>
+
+  <rect class="box" x="850" y="110" width="130" height="130" rx="6"/>
+  <text class="tb" x="915" y="136" text-anchor="middle">EG915N-EU</text>
+  <text class="t" x="915" y="158" text-anchor="middle">LTE Cat 1</text>
+  <text class="t" x="915" y="176" text-anchor="middle">VBAT 3.4–4.5 V</text>
+  <text class="t" x="915" y="194" text-anchor="middle">UART 1.8 V</text>
+  <text class="ts" x="915" y="214" text-anchor="middle">SIM / eSIM</text>
+
+  <!-- data -->
+  <line class="data" x1="202" y1="150" x2="308" y2="150" marker-start="url(#hw-a)" marker-end="url(#hw-a)"/>
+  <text class="ts" x="255" y="141" text-anchor="middle">UART 115200</text>
+  <text class="ts" x="255" y="167" text-anchor="middle">HCI · SLIP</text>
+  <line class="data" x1="482" y1="150" x2="568" y2="150" marker-start="url(#hw-a)" marker-end="url(#hw-a)"/>
+  <text class="ts" x="525" y="141" text-anchor="middle">UART</text>
+  <text class="ts" x="525" y="167" text-anchor="middle">SAP 80h</text>
+  <line class="data" x1="692" y1="150" x2="723" y2="150" marker-start="url(#hw-a)" marker-end="url(#hw-a)"/>
+  <line class="data" x1="817" y1="150" x2="848" y2="150" marker-start="url(#hw-a)" marker-end="url(#hw-a)"/>
+  <text class="ts" x="770" y="196" text-anchor="middle">TXD RXD RTS CTS</text>
+  <text class="ts" x="770" y="211" text-anchor="middle">DTR RI</text>
+
+  <!-- control -->
+  <line class="ctl" x1="310" y1="195" x2="202" y2="195" marker-end="url(#hw-m)"/>
+  <text class="ts" x="255" y="212" text-anchor="middle">nRST · BOOT</text>
+  <path class="ctl" d="M310 228 H255 V310 H182" marker-end="url(#hw-m)"/>
+  <text class="ts" x="262" y="275">EN</text>
+  <path class="ctl" d="M480 228 H530 V310 H568" marker-end="url(#hw-m)"/>
+  <text class="ts" x="537" y="275">EN</text>
+  <path class="ctl" d="M680 240 V262 H880 V242" marker-end="url(#hw-m)"/>
+  <text class="ts" x="780" y="256" text-anchor="middle">PWRKEY · STATUS</text>
+  <path class="ctl" d="M650 240 V278 H820 V310 H848" marker-end="url(#hw-m)"/>
+  <text class="ts" x="790" y="294" text-anchor="middle">EN</text>
+
+  <!-- switches / converters -->
+  <rect class="box" x="60" y="290" width="120" height="40" rx="4"/>
+  <text class="t" x="120" y="315" text-anchor="middle">switch 3.3 V</text>
+  <rect class="box" x="570" y="290" width="120" height="40" rx="4"/>
+  <text class="t" x="630" y="315" text-anchor="middle">switch 3.3 V</text>
+  <rect class="box" x="850" y="290" width="130" height="40" rx="4"/>
+  <text class="t" x="915" y="315" text-anchor="middle">buck-boost 3.8 V</text>
+
+  <line class="pwr2" x1="120" y1="290" x2="120" y2="243" marker-end="url(#hw-f)"/>
+  <line class="pwr2" x1="630" y1="290" x2="630" y2="243" marker-end="url(#hw-f)"/>
+  <line class="pwr2" x1="945" y1="290" x2="945" y2="243" marker-end="url(#hw-f)"/>
+
+  <!-- 3V3 bus -->
+  <line class="pwr2" x1="120" y1="330" x2="120" y2="375"/>
+  <line class="pwr2" x1="630" y1="330" x2="630" y2="375"/>
+  <line class="pwr2" x1="120" y1="375" x2="630" y2="375"/>
+  <text class="ts" x="110" y="379" text-anchor="end">3V3</text>
+  <rect class="box" x="330" y="410" width="120" height="40" rx="4"/>
+  <text class="t" x="390" y="427" text-anchor="middle">LDO 3.3 V</text>
+  <text class="ts" x="390" y="443" text-anchor="middle">always on</text>
+  <line class="pwr2" x1="390" y1="410" x2="390" y2="243" marker-end="url(#hw-f)"/>
+  <circle class="dot" cx="390" cy="375" r="3.5"/>
+
+  <!-- VBAT bus -->
+  <line class="pwr" x1="390" y1="450" x2="390" y2="490"/>
+  <line class="pwr" x1="945" y1="330" x2="945" y2="490"/>
+  <line class="pwr" x1="390" y1="490" x2="945" y2="490"/>
+  <text class="ts" x="380" y="494" text-anchor="end">VBAT</text>
+  <line class="pwr" x1="660" y1="520" x2="660" y2="490"/>
+  <circle class="dot" cx="660" cy="490" r="4"/>
+  <rect class="box" x="560" y="520" width="200" height="55" rx="6"/>
+  <text class="t" x="660" y="543" text-anchor="middle">Li-SOCl₂ 3.6 V</text>
+  <text class="ts" x="660" y="562" text-anchor="middle">+ HLC / supercap</text>
+</svg>

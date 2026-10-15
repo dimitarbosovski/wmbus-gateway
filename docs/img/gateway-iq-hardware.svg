@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 320" width="1040" height="320" role="img"><title>Gateway hardware with IQ radio and DSP MCU</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="hw2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-acc" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+  <line class="pwr2" x1="40" y1="165" x2="40" y2="125"/><path class="pwr2" d="M26 109 L40 125 L54 109"/>
+  <text class="ts" x="40" y="96" text-anchor="middle">868 MHz</text>
+  <line class="pwr2" x1="40" y1="165" x2="80" y2="165"/>
+  <rect class="box" x="80" y="140" width="100" height="50" rx="4"/>
+  <text class="t" x="130" y="162" text-anchor="middle">splitter</text><text class="ts" x="130" y="179" text-anchor="middle">or 2 antennas</text>
+  <path class="pwr2" d="M180 165 H205 V90 H228"/>
+  <path class="pwr2" d="M205 165 V240 H228"/>
+  <rect class="box" x="230" y="60" width="180" height="60" rx="6"/>
+  <text class="tb" x="320" y="85" text-anchor="middle">iM891A-XL</text><text class="ts" x="320" y="104" text-anchor="middle">decoded packets</text>
+  <rect class="box-acc" x="230" y="210" width="180" height="60" rx="6"/>
+  <text class="tb" x="320" y="235" text-anchor="middle">STM32WL3x</text><text class="ts" x="320" y="254" text-anchor="middle">IQ mode · 500 kS/s</text>
+  <path class="data" d="M410 90 H445 V140 H478" marker-end="url(#hw2-a)"/>
+  <text class="ts" x="445" y="78" text-anchor="middle">UART · HCI</text>
+  <path class="data" d="M410 240 H445 V195 H478" marker-end="url(#hw2-a)"/>
+  <text class="ts" x="445" y="290" text-anchor="middle">SPI · IQ 8–16 Mbit/s</text>
+  <rect class="box-acc" x="480" y="110" width="210" height="110" rx="6"/>
+  <text class="tb" x="585" y="136" text-anchor="middle">STM32U575</text>
+  <text class="ts" x="585" y="156" text-anchor="middle">Cortex-M33 + DSP · 160 MHz</text>
+  <text class="ts" x="585" y="174" text-anchor="middle">786 KB SRAM</text>
+  <text class="ts" x="585" y="194" text-anchor="middle">filter · SIC · collector</text>
+  <line class="data" x1="690" y1="165" x2="738" y2="165" marker-end="url(#hw2-a)"/>
+  <text class="ts" x="714" y="155" text-anchor="middle">UART</text>
+  <rect class="box" x="740" y="135" width="110" height="60" rx="6"/>
+  <text class="tb" x="795" y="161" text-anchor="middle">ESP32</text><text class="ts" x="795" y="180" text-anchor="middle">LTE session</text>
+  <line class="data" x1="850" y1="165" x2="888" y2="165" marker-end="url(#hw2-a)"/>
+  <rect class="box" x="890" y="135" width="130" height="60" rx="6"/>
+  <text class="tb" x="955" y="161" text-anchor="middle">EG915N-EU</text><text class="ts" x="955" y="180" text-anchor="middle">LTE Cat 1 → MQTT</text>
+  <line class="pwr2" x1="955" y1="135" x2="955" y2="100"/><path class="pwr2" d="M941 84 L955 100 L969 84"/>
+</svg>

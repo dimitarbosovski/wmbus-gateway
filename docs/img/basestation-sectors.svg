@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 400" width="940" height="400" role="img"><title>Simultaneous telegrams in different sectors vs. in one sector</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="cm-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-acc" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+  <text class="tb" x="230" y="28" text-anchor="middle">Different sectors</text>
+  <path class="wedge" d="M230 190 L160.0 68.8 A140 140 0 0 1 300.0 68.8 Z"/>
+  <text class="ts" x="230.0" y="76.0" text-anchor="middle">S1</text>
+  <path class="wedge-hl" d="M230 190 L300.0 68.8 A140 140 0 0 1 370.0 190.0 Z"/>
+  <text class="ts" x="332.2" y="135.0" text-anchor="middle">S2</text>
+  <path class="wedge" d="M230 190 L370.0 190.0 A140 140 0 0 1 300.0 311.2 Z"/>
+  <text class="ts" x="332.2" y="253.0" text-anchor="middle">S3</text>
+  <path class="wedge" d="M230 190 L300.0 311.2 A140 140 0 0 1 160.0 311.2 Z"/>
+  <text class="ts" x="230.0" y="312.0" text-anchor="middle">S4</text>
+  <path class="wedge-hl" d="M230 190 L160.0 311.2 A140 140 0 0 1 90.0 190.0 Z"/>
+  <text class="ts" x="127.8" y="253.0" text-anchor="middle">S5</text>
+  <path class="wedge" d="M230 190 L90.0 190.0 A140 140 0 0 1 160.0 68.8 Z"/>
+  <text class="ts" x="127.8" y="135.0" text-anchor="middle">S6</text>
+  <circle class="mast" cx="230" cy="190" r="14"/>
+  <line class="data" x1="290.6" y1="155.0" x2="245.6" y2="181.0" marker-end="url(#cm-a)"/>
+  <rect class="meter" x="283.6" y="148.0" width="14" height="14" rx="2"/>
+  <text class="tb" x="304.6" y="145.0" text-anchor="middle">A</text>
+  <line class="data" x1="169.4" y1="225.0" x2="214.4" y2="199.0" marker-end="url(#cm-a)"/>
+  <rect class="meter" x="162.4" y="218.0" width="14" height="14" rx="2"/>
+  <text class="tb" x="155.4" y="215.0" text-anchor="middle">B</text>
+  <text class="t" x="230" y="360" text-anchor="middle">S2 decodes A, S5 decodes B</text>
+  <text class="ts" x="230" y="378" text-anchor="middle">both telegrams received</text>
+  <text class="tb" x="700" y="28" text-anchor="middle">One sector</text>
+  <path class="wedge" d="M700 190 L630.0 68.8 A140 140 0 0 1 770.0 68.8 Z"/>
+  <text class="ts" x="700.0" y="76.0" text-anchor="middle">S1</text>
+  <path class="wedge-hl" d="M700 190 L770.0 68.8 A140 140 0 0 1 840.0 190.0 Z"/>
+  <text class="ts" x="802.2" y="135.0" text-anchor="middle">S2</text>
+  <path class="wedge" d="M700 190 L840.0 190.0 A140 140 0 0 1 770.0 311.2 Z"/>
+  <text class="ts" x="802.2" y="253.0" text-anchor="middle">S3</text>
+  <path class="wedge" d="M700 190 L770.0 311.2 A140 140 0 0 1 630.0 311.2 Z"/>
+  <text class="ts" x="700.0" y="312.0" text-anchor="middle">S4</text>
+  <path class="wedge" d="M700 190 L630.0 311.2 A140 140 0 0 1 560.0 190.0 Z"/>
+  <text class="ts" x="597.8" y="253.0" text-anchor="middle">S5</text>
+  <path class="wedge" d="M700 190 L560.0 190.0 A140 140 0 0 1 630.0 68.8 Z"/>
+  <text class="ts" x="597.8" y="135.0" text-anchor="middle">S6</text>
+  <circle class="mast" cx="700" cy="190" r="14"/>
+  <line class="ctl" x1="783.2" y1="115.1" x2="713.4" y2="178.0"/>
+  <text class="tx" x="748.3" y="151.5" text-anchor="middle">×</text>
+  <rect class="meter" x="776.2" y="108.1" width="14" height="14" rx="2"/>
+  <text class="tb" x="799.2" y="105.1" text-anchor="middle">A</text>
+  <line class="data" x1="769.5" y1="171.4" x2="717.4" y2="185.3" marker-end="url(#cm-a)"/>
+  <rect class="meter" x="762.5" y="164.4" width="14" height="14" rx="2"/>
+  <text class="tb" x="779.5" y="193.4" text-anchor="middle">C</text>
+  <text class="t" x="700" y="360" text-anchor="middle">S2: one demodulator</text>
+  <text class="ts" x="700" y="378" text-anchor="middle">C is stronger and wins (capture), A is lost</text>
+  <line class="grid" x1="465" y1="20" x2="465" y2="390"/>
+</svg>

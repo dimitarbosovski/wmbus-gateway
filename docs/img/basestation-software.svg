@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340" role="img"><title>Base station software on the Raspberry Pi 5</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="pp-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-acc" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="pp-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-fg" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="pp-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-mut" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+  <text class="th" x="20" y="24">PORTS · channel.py</text>
+  <rect class="box" x="20" y="40" width="160" height="30" rx="4"/><text class="t" x="100" y="60" text-anchor="middle">S1 · UART0</text>
+  <rect class="box" x="20" y="82" width="160" height="30" rx="4"/><text class="t" x="100" y="102" text-anchor="middle">S2 · UART1</text>
+  <rect class="box" x="20" y="124" width="160" height="30" rx="4"/><text class="t" x="100" y="144" text-anchor="middle">S3 · UART2</text>
+  <rect class="box" x="20" y="166" width="160" height="30" rx="4"/><text class="t" x="100" y="186" text-anchor="middle">S4 · UART3</text>
+  <rect class="box" x="20" y="208" width="160" height="30" rx="4"/><text class="t" x="100" y="228" text-anchor="middle">S5 · UART4</text>
+  <rect class="box" x="20" y="250" width="160" height="30" rx="4"/><text class="t" x="100" y="270" text-anchor="middle">S6 · USB-UART</text>
+  <line class="data" x1="180" y1="55" x2="215" y2="55"/>
+  <line class="data" x1="180" y1="97" x2="215" y2="97"/>
+  <line class="data" x1="180" y1="139" x2="215" y2="139"/>
+  <line class="data" x1="180" y1="181" x2="215" y2="181"/>
+  <line class="data" x1="180" y1="223" x2="215" y2="223"/>
+  <line class="data" x1="180" y1="265" x2="215" y2="265"/>
+  <line class="data" x1="215" y1="55" x2="215" y2="265"/>
+  <line class="data" x1="215" y1="160" x2="268" y2="160" marker-end="url(#pp-a)"/>
+  <text class="ts" x="242" y="150" text-anchor="middle">Rx 20h</text>
+
+  <rect class="box-acc" x="270" y="120" width="180" height="80" rx="6"/>
+  <text class="t" x="360" y="145" text-anchor="middle">merge.py</text>
+  <text class="ts" x="360" y="165" text-anchor="middle">key = packet bytes</text>
+  <text class="ts" x="360" y="181" text-anchor="middle">200 ms window</text>
+  <line class="data" x1="450" y1="160" x2="498" y2="160" marker-end="url(#pp-a)"/>
+
+  <rect class="box" x="500" y="120" width="170" height="80" rx="6"/>
+  <text class="t" x="585" y="145" text-anchor="middle">oms.py</text>
+  <text class="ts" x="585" y="165" text-anchor="middle">mode 5 / 7</text>
+  <text class="ts" x="585" y="181" text-anchor="middle">key: CSV · REST</text>
+  <line class="data" x1="670" y1="160" x2="718" y2="160" marker-end="url(#pp-a)"/>
+
+  <rect class="box" x="720" y="120" width="150" height="80" rx="6"/>
+  <text class="t" x="795" y="145" text-anchor="middle">JSON</text>
+  <text class="ts" x="795" y="165" text-anchor="middle">…/telegram</text>
+  <text class="ts" x="795" y="181" text-anchor="middle">QoS 1</text>
+  <line class="data" x1="870" y1="160" x2="918" y2="160" marker-end="url(#pp-a)"/>
+  <text class="t" x="925" y="156">MQTT</text>
+  <text class="ts" x="925" y="172">broker</text>
+
+  <path class="down" d="M360 200 V255 H498" marker-end="url(#pp-f)"/>
+  <rect class="box" x="500" y="225" width="170" height="60" rx="6"/>
+  <text class="t" x="585" y="250" text-anchor="middle">stats.py</text>
+  <text class="ts" x="585" y="268" text-anchor="middle">collisions · losses</text>
+  <line class="down" x1="670" y1="255" x2="718" y2="255" marker-end="url(#pp-f)"/>
+  <rect class="box" x="720" y="225" width="150" height="60" rx="6"/>
+  <text class="ts" x="795" y="250" text-anchor="middle">…/stats · 60 s</text>
+  <text class="ts" x="795" y="268" text-anchor="middle">…/meters · 1 h</text>
+  <path class="ctl" d="M215 265 V315 H585 V287" marker-end="url(#pp-m)"/>
+  <text class="ts" x="400" y="331" text-anchor="middle">Gateway Status 41h every 60 s: Rx-Packet, Rx-Error</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 270" width="1000" height="270" role="img"><title>One receive cycle: what is powered in each phase</title><style>
+svg { color: #26292b; }
+.box { fill: #ffffff; stroke: currentColor; stroke-width: 1.2; }
+.box-acc { fill: #fdeee5; stroke: #f26522; stroke-width: 1.6; }
+.lane { fill: #f6f7f7; stroke: #d3d8da; stroke-width: 1; }
+.t { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: currentColor; }
+.ts { font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; }
+.tb { font: 600 13.5px 'Segoe UI', Helvetica, Arial, sans-serif; fill: currentColor; }
+.th { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5b6366; letter-spacing: 0.06em; }
+.data { stroke: #f26522; stroke-width: 2; fill: none; }
+.down { stroke: currentColor; stroke-width: 1.4; fill: none; }
+.ctl { stroke: #5b6366; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+.pwr { stroke: currentColor; stroke-width: 3.2; fill: none; }
+.pwr2 { stroke: currentColor; stroke-width: 1.8; fill: none; }
+.grid { stroke: #d3d8da; stroke-width: 1; stroke-dasharray: 3 4; }
+.mk-acc { fill: #f26522; } .mk-fg { fill: currentColor; } .mk-mut { fill: #5b6366; }
+.dot { fill: currentColor; } .bar-on { fill: #26292b; } .bar-acc { fill: #f26522; } .bar-low { fill: #d3d8da; }
+.wedge { fill: #ffffff; stroke: #d3d8da; stroke-width: 1.2; }
+.wedge-hl { fill: #fdeee5; stroke: #f26522; stroke-width: 1.2; }
+.mast { fill: #26292b; } .meter { fill: #ffffff; stroke: currentColor; stroke-width: 1.6; }
+.tx { font: 600 16px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #5b6366; } .band { fill: #fbf1dc; }
+.ghost { fill: none; stroke: #5b6366; stroke-width: 1.4; stroke-dasharray: 5 4; }
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+  <text class="th" x="150" y="30">SLEEP</text>
+  <text class="th" x="236" y="30">BOOT+CFG</text>
+  <text class="th" x="336" y="30">LISTEN ≤ window_s</text>
+  <text class="th" x="566" y="30">ESP32</text>
+  <text class="th" x="636" y="30">LTE + MQTT</text>
+  <text class="th" x="836" y="30">SLEEP</text>
+  <line class="grid" x1="230" y1="40" x2="230" y2="215"/>
+  <line class="grid" x1="330" y1="40" x2="330" y2="215"/>
+  <line class="grid" x1="560" y1="40" x2="560" y2="215"/>
+  <line class="grid" x1="630" y1="40" x2="630" y2="215"/>
+  <line class="grid" x1="830" y1="40" x2="830" y2="215"/>
+
+  <text class="t" x="16" y="74">STM32</text>
+  <rect class="bar-low" x="150" y="64" width="80" height="6"/>
+  <rect class="bar-on" x="230" y="60" width="600" height="14"/>
+  <rect class="bar-low" x="830" y="64" width="160" height="6"/>
+  <text class="ts" x="150" y="90">STOP + RTC</text>
+  <text class="ts" x="336" y="90">WFI between UART interrupts</text>
+
+  <text class="t" x="16" y="124">iM891A-XL</text>
+  <rect class="bar-acc" x="230" y="110" width="330" height="14"/>
+  <text class="ts" x="336" y="140">Rx, filter + decrypt on STM32</text>
+
+  <text class="t" x="16" y="174">ESP32</text>
+  <rect class="bar-on" x="560" y="160" width="270" height="14"/>
+
+  <text class="t" x="16" y="214">EG915N-EU</text>
+  <rect class="bar-on" x="630" y="200" width="200" height="14"/>
+  <text class="ts" x="636" y="232">attach · TLS · publish ≤ 1500 B</text>
+  <text class="ts" x="636" y="248">downlink · QPOWD</text>
+  <text class="ts" x="990" y="262" text-anchor="end">not to scale</text>
+</svg>
