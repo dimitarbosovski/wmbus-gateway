@@ -1,0 +1,409 @@
+{
+ "trials_e3": 200,
+ "trials_e1": 100,
+ "e3": {
+  "0": {
+   "time": {
+    "correct": 0.44,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 0.44,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.275,
+    "wrong": 0.005,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.085,
+    "wrong": 0.005,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.005,
+    "wrong": 0.005,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 0.37,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 0.235,
+    "wrong": 0.005,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.11,
+    "wrong": 0.035,
+    "decoded": 0.0,
+    "misattributed": 0
+   }
+  },
+  "2": {
+   "time": {
+    "correct": 0.89,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 0.89,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.815,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.325,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.035,
+    "wrong": 0.01,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 0.87,
+    "wrong": 0.0,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 0.75,
+    "wrong": 0.005,
+    "decoded": 0.0,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.455,
+    "wrong": 0.02,
+    "decoded": 0.0,
+    "misattributed": 0
+   }
+  },
+  "4": {
+   "time": {
+    "correct": 0.985,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 0.985,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.955,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.53,
+    "wrong": 0.0,
+    "decoded": 0.01,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.055,
+    "wrong": 0.015,
+    "decoded": 0.005,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 0.98,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 0.94,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.7,
+    "wrong": 0.0,
+    "decoded": 0.02,
+    "misattributed": 0
+   }
+  },
+  "6": {
+   "time": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.37,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.37,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.98,
+    "wrong": 0.0,
+    "decoded": 0.37,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.585,
+    "wrong": 0.0,
+    "decoded": 0.34,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.09,
+    "wrong": 0.005,
+    "decoded": 0.32,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.37,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 0.99,
+    "wrong": 0.0,
+    "decoded": 0.37,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.8,
+    "wrong": 0.0,
+    "decoded": 0.36,
+    "misattributed": 0
+   }
+  },
+  "8": {
+   "time": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.925,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.925,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.975,
+    "wrong": 0.0,
+    "decoded": 0.925,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.61,
+    "wrong": 0.0,
+    "decoded": 0.9,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.1,
+    "wrong": 0.005,
+    "decoded": 0.905,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.925,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 0.925,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.87,
+    "wrong": 0.0,
+    "decoded": 0.92,
+    "misattributed": 0
+   }
+  },
+  "10": {
+   "time": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "lowseq_64": {
+    "correct": 0.99,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "correct": 0.605,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "lowseq_16": {
+    "correct": 0.105,
+    "wrong": 0.01,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "maxvar_64": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "correct": 1.0,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   },
+   "maxvar_16": {
+    "correct": 0.82,
+    "wrong": 0.0,
+    "decoded": 1.0,
+    "misattributed": 0
+   }
+  }
+ },
+ "e1": {
+  "-9": {
+   "time": {
+    "both": 0.91,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "both": 0.91,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "both": 0.91,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "both": 0.9,
+    "misattributed": 0
+   }
+  },
+  "-3": {
+   "time": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "both": 0.7,
+    "misattributed": 0
+   }
+  },
+  "3": {
+   "time": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "both": 0.7,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "both": 0.68,
+    "misattributed": 0
+   }
+  },
+  "9": {
+   "time": {
+    "both": 0.95,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "both": 0.95,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "both": 0.95,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "both": 0.95,
+    "misattributed": 0
+   }
+  },
+  "15": {
+   "time": {
+    "both": 0.97,
+    "misattributed": 0
+   },
+   "walsh_all": {
+    "both": 0.97,
+    "misattributed": 0
+   },
+   "maxvar_32": {
+    "both": 0.97,
+    "misattributed": 0
+   },
+   "lowseq_32": {
+    "both": 0.94,
+    "misattributed": 0
+   }
+  }
+ },
+ "ops": {
+  "time": 27000,
+  "walsh_all": 32896,
+  "lowseq_64": 16896,
+  "lowseq_32": 8896,
+  "lowseq_16": 4896,
+  "maxvar_64": 16896,
+  "maxvar_32": 8896,
+  "maxvar_16": 4896
+ },
+ "seconds": 91.2
+}

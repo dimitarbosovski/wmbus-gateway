@@ -1,0 +1,34 @@
+{
+ "params": {
+  "meters": 250,
+  "interval_s": 60,
+  "window_s": 180,
+  "fs": 500000
+ },
+ "airtime_ms": {
+  "T0x1e": 4.96,
+  "T0x2e": 7.12,
+  "C0x1e": 3.58,
+  "C0x2e": 5.02,
+  "T_L255": 35.3
+ },
+ "telegrams_per_s": 4.17,
+ "p_overlap": 0.0422,
+ "ops_per_s": {
+  "front_end": 32000000,
+  "template_bank": 112500.00000000001,
+  "sic_if_all": 33658854.16666667,
+  "sic_overlapped_only": 1419341.1218444651,
+  "sic_per_packet": 8078125.0
+ },
+ "ram_bytes": {
+  "iq": 141280.0,
+  "soft": 70640.0,
+  "templates": 27000,
+  "total": 238920.0
+ },
+ "link_bit_s": {
+  "iq8": 8000000,
+  "iq16": 16000000
+ }
+}
