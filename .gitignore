@@ -5,3 +5,4 @@ gateway/test/test_collector
 gateway/test/vectors.h
 *.o
 .venv/
+.DS_Store

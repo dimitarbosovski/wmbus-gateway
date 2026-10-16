@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/eu/BG_Co-fundedbytheEU_RGB_NEG.png">
+  <img src="docs/img/eu/BG_Co-fundedbytheEU_RGB_POS.png" alt="Съфинансирано от Европейския съюз (Co-funded by the European Union)" width="360">
+</picture>
+
 # wM-Bus gateway
 
 Wireless M-Bus (EN 13757-4 / OMS) receiver stack for a fixed reading network:
@@ -16,6 +21,36 @@ basestation/   Python service for the 6-sector base station on a Raspberry Pi 5
 dsp/           receiver DSP: sync correlator, Walsh-domain address templates, SIC
 docs/img/      block diagrams (SVG)
 ```
+
+## Project and funding
+
+The software and technical materials published here relate to the implementation of project BG16RFPR001-1.001-0061-C01 "Development of innovations in Skorpion 7 OOD".
+
+- Beneficiary: Skorpion 7 OOD („Скорпион 7“ ООД)
+- Implementation period: 12.03.2025–12.09.2026
+
+The project is carried out with the financial support of the European Regional Development Fund through the Programme "Competitiveness and Innovation in Enterprises" 2021–2027.
+
+Its aim is to develop and demonstrate a noise-immune, asynchronous and energy-autonomous telemetry system for remote collection and transmission of data from metering devices.
+
+Within the project, an autonomous battery-powered Wireless M-Bus gateway with direct data transmission over LTE Cat 1 has been developed, together with the required software components and data processing tools.
+
+### Published materials
+
+This repository provides public access to:
+
+- software components for the battery gateway controller;
+- a software service for a six-sector base station;
+- a reference implementation and simulations for radio signal processing, including matched filtering, address templates in the Walsh–Hadamard domain and processing of overlapping telegrams;
+- technical descriptions, block diagrams, example configurations, tests and simulation results.
+
+The status and limitations of the individual components are described in the respective directories. The reference simulations are kept separate from the implementations for specific hardware.
+
+The publication supports the dissemination of the results and allows them to be studied and verified technically.
+
+Date of initial public release: 15.10.2026
+
+Responsibility for the content lies with Skorpion 7 OOD. The views expressed do not necessarily represent the official position of the European Union or of the Managing Authority of the Programme.
 
 ## Battery gateway
 
@@ -104,3 +139,7 @@ independent Python implementation (`gateway/test/gen_vectors.py`).
 - EN 13757-4, EN 13757-7
 - TI AN067 (SWRA234), Silicon Labs AN451, ST AN4772
 - STM32WL3x, STM32U575 datasheets
+
+## License
+
+MIT, see [LICENSE](LICENSE). The EU emblem in `docs/img/eu/` is not covered by this license; its use is governed by the EU rules.
